@@ -1,0 +1,185 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+html{scroll-behavior:smooth}
+
+.hero{
+  height:100vh;
+  background:url("photo_2026-01-08_20-29-20.jpg") center/cover;
+  position:relative
+}
+
+/* ضبط الصفحة بالكامل */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* قسم الهيرو */
+.hero {
+  height: 100vh; /* 100% من ارتفاع الشاشة */
+  background-image: url('https://f.nooncdn.com/p/pzsku/Z40927C1E5EFF003FD69CZ/45/1746207335/262b2cca-82ec-490c-924b-add6d1fe1169.jpg?format=webp&width=800'); /* حطي رابط الصورة هنا */
+  background-size: cover; /* تغطي الصفحة بالكامل */
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Overlay للتعتيم على الصورة */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* شوية غمقان للصورة */
+  padding: 50px;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+}
+
+
+
+
+.overlay{
+  position:absolute;inset:0;
+  background:rgba(0,0,0,.35);
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  color:#fff
+}
+
+.hero-btn{
+  padding:15px 40px;
+  border:1px solid #fff;
+  color:#fff;text-decoration:none
+}
+
+.products{
+  padding:60px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  background:#f5f5f5
+}
+
+.product-card{
+  background:#fff;
+  padding:15px;
+  text-decoration:none;
+  color:#000;
+  border-radius:10px;
+  transition:.3s
+}
+
+.product-card:hover{
+  transform:translateY(-5px)
+}
+
+.product-card img{
+  width:100%;
+  border-radius:10px
+}
+
+
+.main-header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:70px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  
+ 
+}
+
+.brand{
+  font-size:22px;
+  letter-spacing:4px;
+  font-weight:500;
+}
+
+@media (max-width: 768px){
+
+  /* HEADER */
+  .main-header{
+    height:60px;
+  }
+
+  .brand{
+    font-size:18px;
+    letter-spacing:2px;
+  }
+
+  body{
+    padding-top:60px;
+  }
+
+  /* HERO */
+  .overlay h1{
+    font-size:32px;
+  }
+
+  .hero-btn{
+    padding:12px 30px;
+    font-size:16px;
+  }
+
+  /* PRODUCTS */
+  .products{
+    padding:30px 20px;
+  }
+
+  /* PRODUCT DETAILS */
+  .product-details {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-direction: row;
+  border: 2px solid red;
+}
+
+/* صورة المنتج */
+.product-image img {
+  width: 100px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* معلومات المنتج */
+.product-info h2 {
+  margin: 0;
+  font-size: 24px;
+  flex: 1;
+}
+
+.price {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product-info label {
+  display: block;
+  margin-top: 12px;
+}
+
+/* 📱 موبايل */
+@media (max-width: 768px) {
+  .product-details {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .product-image img {
+    width: 100;
+    
+  }
+
+  .product-info {
+    text-align: center;
+  }
+}
+}
+
+
